@@ -5,8 +5,10 @@
     <string name="title">Quiz</string>
     <string name="try_again">Try Again?</string>
     <string name="position">Position</string>
+    <string name="owner_name">Marmalade</string>
     <string name="setting">Settings</string>
     <string name="secret">Secret</string>
+    <string name="owner">Create by</string>
     <string name="select_an_avatar">Select an Avatar</string>
     <string name="android_quiz">Android Quiz</string>
     <string name="about_text">Android Quiz will help remind you of important concepts you have learned and will learn in Android development.\n\nConsider modifying the questions and graphics to make this game your own!</string>

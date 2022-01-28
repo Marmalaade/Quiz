@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/rulesFragment"
+            android:icon="@drawable/rules"
+            android:title="@string/rules" />
+        <item
+            android:id="@+id/aboutFragment"
+            android:icon="@drawable/about"
+            android:title="@string/about" />
+        <item
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/settings"
+            android:title="@string/setting" />
+    </group>
+
+    <item android:title="@string/owner">
+        <menu>
+            <item
+                android:id="@+id/owner"
+                android:icon="@drawable/android"
+                android:title="@string/owner_name" />
+        </menu>
+
+    </item>
+</menu>
