@@ -11,10 +11,11 @@ import androidx.navigation.findNavController
 import com.example.android.navigation.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
+
     data class Question(
-        val text: String,
-        val answers: List<String>
+        val text: String, val answers: List<String>
     )
+
 
     private val questions: MutableList<Question> = mutableListOf(
         Question(
@@ -34,12 +35,20 @@ class GameFragment : Fragment() {
             answers = listOf("Data Binding", "Data Pushing", "Set Text", "OnClick")
         ),
         Question(
+            text = "Happy question :D",
+            answers = listOf("Yes", "No", "I don't know", "?")
+        ),
+        Question(
+            text = "Are there any differences between fragment and activity life cycles?",
+            answers = listOf("Yes", "I'm not sure", "No", "Differences are insignificant")
+        ),
+        Question(
             text = "Inflate layout in fragments?",
             answers = listOf("onCreateView", "onViewCreated", "onCreateLayout", "onInflateLayout")
         ),
         Question(
             text = "Build system for Android?",
-            answers = listOf("Gradle", "Graddle", "Grodle", "Groyle")
+            answers = listOf("Gradle", "Graddle", "Gridle", "Groyle")
         ),
         Question(
             text = "Android vector format?",
@@ -62,29 +71,24 @@ class GameFragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private val numQuestions = Math.min((questions.size + 1) / 2, 3)
+    private val numQuestions = Math.min((questions.size + 1) / 2, 5)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentGameBinding>(
             inflater, R.layout.fragment_game, container, false
         )
 
-        // Shuffles the questions and sets the question index to the first question.
         randomizeQuestions()
 
-        // Bind this fragment class to the layout
         binding.game = this
 
-        // Set the onClickListener for the submitButton
         binding.submitButton.setOnClickListener @Suppress("UNUSED_ANONYMOUS_PARAMETER")
         { view: View ->
             val checkedId = binding.questionRadioGroup.checkedRadioButtonId
-            // Do nothing if nothing is checked (id == -1)
             if (-1 != checkedId) {
                 var answerIndex = 0
                 when (checkedId) {
@@ -92,11 +96,8 @@ class GameFragment : Fragment() {
                     R.id.thirdAnswerRadioButton -> answerIndex = 2
                     R.id.fourthAnswerRadioButton -> answerIndex = 3
                 }
-                // The first answer in the original question is always the correct one, so if our
-                // answer matches, we have the correct answer.
                 if (answers[answerIndex] == currentQuestion.answers[0]) {
                     questionIndex++
-                    // Advance to the next question
                     if (questionIndex < numQuestions) {
                         currentQuestion = questions[questionIndex]
                         setQuestion()
@@ -113,15 +114,12 @@ class GameFragment : Fragment() {
         return binding.root
     }
 
-    // randomize the questions and set the first question
     private fun randomizeQuestions() {
         questions.shuffle()
         questionIndex = 0
         setQuestion()
     }
 
-    // Sets the question and randomizes the answers.  This only changes the data, not the UI.
-    // Calling invalidateAll on the FragmentGameBinding updates the data.
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
