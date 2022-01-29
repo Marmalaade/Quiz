@@ -9,18 +9,20 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/titleConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/main_color">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/playButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
+            android:background="@drawable/custom_button"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
-            android:text="Play"
-            android:textColor="@color/colorAccent"
+            android:text="@string/start"
+            android:textColor="@color/white"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -40,7 +42,23 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/android_trivia" />
+            app:srcCompat="@drawable/android_quiz" />
+
+        <TextView
+            android:id="@+id/game_name"
+            style="@style/TextViewPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:shadowColor="@color/electric_blue"
+            android:shadowDx="-5"
+            android:shadowDy="-3"
+            android:shadowRadius="2"
+            android:text="@string/title"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toTopOf="@+id/playButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleImage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

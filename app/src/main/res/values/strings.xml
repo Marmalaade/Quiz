@@ -8,12 +8,14 @@
     <string name="owner_name">Marmalade</string>
     <string name="setting">Settings</string>
     <string name="more">More</string>
+    <string name="start">Start</string>
+    <string name="continued">To be continued...</string>
     <string name="owner">Create by</string>
     <string name="wassup">How it\'s going?</string>
     <string name="select_an_avatar">Select an Avatar</string>
     <string name="android_quiz">Android Quiz</string>
-    <string name="about_text">Android Quiz will help remind you of important concepts you have learned and will learn in Android development.\n\nConsider modifying the questions and graphics to make this game your own!</string>
-    <string name="rules_text">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.\n\nIf you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
+    <string name="about_text"> \tAndroid Quiz will help remind you of important concepts you have learned and will learn in Android development.\n\nThe quiz does not shine with a huge list of questions, but it\'s better than nothing!\nPs: if there are any mistakes, sry for my english :(</string>
+    <string name="rules_text"> \tSelect the answer from the options given. Each time you get an answer correct, you advance to the next question.\n\nIf you get the answer wrong, your game ends! I think u are well aware of the rule of a banal and simple quiz. Let\'s go! </string>
     <string name="rules">Rules</string>
     <string name="about">About</string>
     <string name="quiz_hint">Quiz Hint</string>

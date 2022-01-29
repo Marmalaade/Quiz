@@ -20,16 +20,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/main_color">
 
             <ImageView
                 android:id="@+id/questionImage"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/image_header_height"
                 android:layout_marginStart="@dimen/horizontal_margin"
-                android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/horizontal_margin"
-                android:layout_marginBottom="@dimen/vertical_margin"
                 android:scaleType="fitCenter"
                 app:layout_constraintBottom_toTopOf="@+id/questionText"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -48,6 +47,7 @@
                 android:layout_marginBottom="@dimen/vertical_margin"
                 android:fontFamily="sans-serif"
                 android:text="@{game.currentQuestion.text}"
+                android:textColor="@color/white"
                 android:textSize="@dimen/question_text_size"
                 android:textStyle="bold"
                 android:typeface="normal"
@@ -74,8 +74,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:buttonTint="@color/electric_blue"
                     android:checked="true"
                     android:text="@{game.answers[0]}"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="Blue" />
 
@@ -84,7 +86,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:buttonTint="@color/electric_blue"
                     android:text="@{game.answers[1]}"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="Green" />
 
@@ -93,7 +97,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:buttonTint="@color/electric_blue"
                     android:text="@{game.answers[2]}"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="Yellow" />
 
@@ -101,19 +107,23 @@
                     android:id="@+id/fourthAnswerRadioButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:buttonTint="@color/electric_blue"
                     android:text="@{game.answers[3]}"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/answer_text_size"
                     tools:text="Red" />
             </RadioGroup>
 
-            <Button
+            <android.widget.Button
                 android:id="@+id/submitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
                 android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:background="@drawable/custom_button"
                 android:text="@string/submit_button"
+                android:textColor="@color/white"
                 android:textSize="@dimen/button_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

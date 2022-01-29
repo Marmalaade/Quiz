@@ -16,7 +16,6 @@ class GameFragment : Fragment() {
         val text: String, val answers: List<String>
     )
 
-
     private val questions: MutableList<Question> = mutableListOf(
         Question(
             text = "What is Android Jetpack?",

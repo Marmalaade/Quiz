@@ -8,4 +8,10 @@
     <color name="youWinBackground">#B7F8C9</color>
     <color name="gameOverBackground">#f8bbd0</color>
     <color name="white">#ffff</color>
+    <color name="main_color">#1F2833</color>
+    <color name="action_bar_color">#0B0C10</color>
+    <color name="space_gray">#C5C6C7</color>
+    <color name="black">#000000</color>
+    <color name="electric_blue">#66FCF1</color>
+    <color name="aquamarin">#45A29E</color>
 </resources>

@@ -9,16 +9,17 @@
         android:id="@+id/gameWonConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/youWinBackground">
+        android:background="@color/main_color">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/nextMatchButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
+            android:background="@drawable/custom_button"
             android:text="Next Match"
-            android:textColor="@color/youWinDark"
+            android:textColor="@color/white"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +40,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/you_win" />
+            app:srcCompat="@drawable/you_win"
+            tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
