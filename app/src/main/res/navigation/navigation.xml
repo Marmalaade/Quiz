@@ -77,6 +77,11 @@
     <fragment
         android:id="@+id/rulesFragment"
         android:name="com.example.android.navigation.RulesFragment"
-        android:label="fragment_rules"
+        android:label="@string/rules"
         tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/moreFragment2"
+        android:name="com.example.android.navigation.MoreFragment"
+        android:label="@string/more"
+        tools:layout="@layout/fragment_more" />
 </navigation>

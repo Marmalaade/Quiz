@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/more" />
+    <item
+        android:id="@+id/moreFragment2"
+        android:title="@string/more" />
 </menu>
