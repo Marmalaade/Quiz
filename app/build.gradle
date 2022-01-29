@@ -48,6 +48,8 @@ dependencies {
 
     // Material Design
     implementation "com.google.android.material:material:$version_material"
+    // Custom Toast
+    implementation 'io.github.muddz:styleabletoast:2.4.0'
 
     // Navigation
     implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"

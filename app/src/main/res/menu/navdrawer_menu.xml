@@ -17,10 +17,12 @@
 
     <item android:title="@string/owner">
         <menu>
-            <item
-                android:id="@+id/owner"
-                android:icon="@drawable/android"
-                android:title="@string/owner_name" />
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/owner"
+                    android:icon="@drawable/android"
+                    android:title="@string/owner_name" />
+            </group>
         </menu>
 
     </item>
